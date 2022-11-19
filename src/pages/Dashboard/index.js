@@ -28,6 +28,9 @@ export default function Dashboard() {
     }
   }
 
+  function filters() {
+    console.log("teste");
+  }
   useEffect(() => {
     async function fetchData() {
       const response = await GetDenuncias();
@@ -56,13 +59,13 @@ export default function Dashboard() {
             label="Age"
             sx={{ bgcolor: "#FF8500", color: "#FFFFFF" }}
           >
-            <MenuItem value={10}>Problemas estruturais</MenuItem>
-            <MenuItem value={20}>Violência</MenuItem>
-            <MenuItem value={30}>Manutenção de ruas</MenuItem>
-            <MenuItem value={40}>Falta de energia</MenuItem>
-            <MenuItem value={50}>Acidentes</MenuItem>
-            <MenuItem value={60}>Resgates</MenuItem>
-            <MenuItem value={70}>Outros</MenuItem>
+            <MenuItem value={0}>Problemas estruturais</MenuItem>
+            <MenuItem value={1}>Violência</MenuItem>
+            <MenuItem value={2}>Manutenção de ruas</MenuItem>
+            <MenuItem value={3}>Falta de energia</MenuItem>
+            <MenuItem value={4}>Acidentes</MenuItem>
+            <MenuItem value={5}>Resgates</MenuItem>
+            <MenuItem value={6}>Outros</MenuItem>
           </Select>
         </FormControl>
         <FormControl sx={{ minWidth: 200 }}>
@@ -84,9 +87,12 @@ export default function Dashboard() {
           return (
             <ListItem
               key={item._id}
+              id={item._id}
               title={item.titulo}
               description={item.descricao}
               status={item.status}
+              comentario={item.comentario}
+              atendenteData={item.atendente_id}
             />
           );
         })}

@@ -15,6 +15,8 @@ export default function Login() {
     if (resultado.status != 200) {
       return [];
     }
+    localStorage.setItem("jwt", resultado.message);
+    console.log(resultado.message);
     navigate("/dashboard");
   }
 

@@ -9,9 +9,18 @@ import { HiOutlineClipboardList } from "react-icons/hi";
 import { Pendente, Container, CustomInput } from "./styles.js";
 import { MdOutlineHourglassEmpty } from "react-icons/md";
 import { AiFillCheckCircle } from "react-icons/ai";
+import AlterarStatus from "../../../../services/denuncias/AlterarStatus.js";
+import AdcionarDescricao from "../../../../services/denuncias/AdcionarDescricao.js";
 
 export default function ListItem(props) {
   const [descricao, setDescricao] = useState("");
+  const codigoJWT = localStorage.getItem("jwt");
+
+  function handleClick() {
+    AlterarStatus(codigoJWT, props.id);
+    AdcionarDescricao(codigoJWT, props.id, descricao);
+    window.location.reload();
+  }
 
   return (
     <Container>
@@ -26,7 +35,7 @@ export default function ListItem(props) {
           <div className="iconeStatus">
             {props.title}
             <Pendente>
-              {props.status === 1 ? (
+              {props.status === 0 ? (
                 <MdOutlineHourglassEmpty color="#FF8500" size={24} />
               ) : (
                 <AiFillCheckCircle color="#FF8500" size={24} />
@@ -43,18 +52,34 @@ export default function ListItem(props) {
             Descrição do problema
           </div>
           <p className="itemDescription">{props.description}</p>
-          <CustomInput
-            type="text"
-            placeholder="Pesquisa uma denúncia"
-            value={descricao}
-            onChange={(e) => setDescricao(e.target.value)}
-          />
-          <Button
-            variant="contained"
-            style={{ backgroundColor: "#FF8500", marginTop: 16 }}
-          >
-            Marcar como solucionado
-          </Button>
+          {props.status === 1 ? (
+            <p className="itemDescription">
+              Denuncia encerrada por: {props.atendenteData.nome} <br />
+              {props.comentario === "" ? (
+                ""
+              ) : (
+                <>Comentarios do atendente: {props.comentario}</>
+              )}
+            </p>
+          ) : (
+            <CustomInput
+              type="text"
+              placeholder="Adicione um comentário..."
+              value={descricao}
+              onChange={(e) => setDescricao(e.target.value)}
+            />
+          )}
+          {props.status === 1 ? (
+            ""
+          ) : (
+            <Button
+              variant="contained"
+              style={{ backgroundColor: "#FF8500", marginTop: 16 }}
+              onClick={handleClick}
+            >
+              Encerrar denuncia
+            </Button>
+          )}
         </AccordionDetails>
       </Accordion>
     </Container>

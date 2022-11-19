@@ -1,10 +1,10 @@
 import React from "react";
 import GlobalStyles from "./styles/GlobalStyles";
-import Login from "./pages/login";
+import Rotas from "./routes";
 function App() {
   return (
     <>
-      <Login />
+      <Rotas />
       <GlobalStyles />
     </>
   );

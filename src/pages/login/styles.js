@@ -17,13 +17,9 @@ export const Container = styled.div`
 
 export const TextWrapper = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  margin-top: 24px;
-  justify-content: space-between;
+  margin-top: 32px;
   gap: 16px;
-
 `;
 
 export const ButtonWrapper = styled.div`
@@ -36,4 +32,14 @@ export const ButtonWrapper = styled.div`
     color: #fff;
     margin-top: 32px;
   }
+`;
+
+export const CustomInput = styled.input`
+  background-color: transparent;
+  width: 250px;
+  height: 24px;
+  border-width: 0px 0px 1px 0px;
+  border-color: #ff8500;
+  text-decoration: none;
+  color: #fff;
 `;

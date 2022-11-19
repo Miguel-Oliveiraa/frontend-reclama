@@ -8,8 +8,9 @@ export default createGlobalStyle`
   text-decoration: none;
 }
 
-body {
-  background-color: #0000;
+html {
+  background-color: #1e1e1e
 }
+
 
 `;

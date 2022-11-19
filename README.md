@@ -2,7 +2,7 @@
 Frontend para projeto a prefeitura de Recife feito em ReactJS com styled-components e materialUI. 💻
 
 <h1 align='left'>
-  <img src='./banner.png'></img>
+  <img src='./bannerReclame.png'></img>
 
 </h1>
 

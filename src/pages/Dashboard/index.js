@@ -4,7 +4,8 @@ import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
 import Logo from "../../assets/reclama.png";
 import ListItem from "./components/ListItem";
 import GetDenuncias from "../../services/denuncias/GetDenuncias";
-
+import GetDenunciasPorFiltro from "../../services/denuncias/BuscarPorFiltro";
+import GetDenunciasPorStatus from "../../services/denuncias/BuscaPorStatus";
 export default function Dashboard() {
   const [titulo, setTitulo] = useState("");
   const [masterData, setMasterData] = useState([]);
@@ -28,8 +29,30 @@ export default function Dashboard() {
     }
   }
 
-  function filters() {
-    console.log("teste");
+  async function filters(e) {
+    const { value } = e.currentTarget.dataset;
+    if (value === "7") {
+      const response = await GetDenuncias();
+      setMasterData(response);
+      setFilterData(response);
+    } else {
+      const results = await GetDenunciasPorFiltro(value);
+      setMasterData(results);
+      setFilterData(results);
+    }
+  }
+
+  async function filterByStatus(e) {
+    const { value } = e.currentTarget.dataset;
+    if (value === "2") {
+      const response = await GetDenuncias();
+      setMasterData(response);
+      setFilterData(response);
+    } else {
+      const results = await GetDenunciasPorStatus(value);
+      setMasterData(results);
+      setFilterData(results);
+    }
   }
   useEffect(() => {
     async function fetchData() {
@@ -59,13 +82,30 @@ export default function Dashboard() {
             label="Age"
             sx={{ bgcolor: "#FF8500", color: "#FFFFFF" }}
           >
-            <MenuItem value={0}>Problemas estruturais</MenuItem>
-            <MenuItem value={1}>Violência</MenuItem>
-            <MenuItem value={2}>Manutenção de ruas</MenuItem>
-            <MenuItem value={3}>Falta de energia</MenuItem>
-            <MenuItem value={4}>Acidentes</MenuItem>
-            <MenuItem value={5}>Resgates</MenuItem>
-            <MenuItem value={6}>Outros</MenuItem>
+            <MenuItem onClick={filters} value={7}>
+              Buscar todos
+            </MenuItem>
+            <MenuItem onClick={filters} value={0}>
+              Problemas estruturais
+            </MenuItem>
+            <MenuItem onClick={filters} value={1}>
+              Violência
+            </MenuItem>
+            <MenuItem onClick={filters} value={2}>
+              Manutenção de ruas
+            </MenuItem>
+            <MenuItem onClick={filters} value={3}>
+              Falta de energia
+            </MenuItem>
+            <MenuItem onClick={filters} value={4}>
+              Acidentes
+            </MenuItem>
+            <MenuItem onClick={filters} value={5}>
+              Resgates
+            </MenuItem>
+            <MenuItem onClick={filters} value={6}>
+              Outros
+            </MenuItem>
           </Select>
         </FormControl>
         <FormControl sx={{ minWidth: 200 }}>
@@ -77,8 +117,15 @@ export default function Dashboard() {
             value={status}
             onChange={setStatus}
           >
-            <MenuItem value={1}>Pendentes</MenuItem>
-            <MenuItem value={2}>Finalizados</MenuItem>
+            <MenuItem onClick={filterByStatus} value={2}>
+              Todos
+            </MenuItem>
+            <MenuItem onClick={filterByStatus} value={0}>
+              Pendentes
+            </MenuItem>
+            <MenuItem onClick={filterByStatus} value={1}>
+              Finalizados
+            </MenuItem>
           </Select>
         </FormControl>
       </Search>

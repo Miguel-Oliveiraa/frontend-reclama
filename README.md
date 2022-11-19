@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Frontend do reclama
+Frontend para projeto a prefeitura de Recife feito em ReactJS com styled-components e materialUI. 💻
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align='left'>
+  <img src='./banner.png'></img>
 
-## Available Scripts
+</h1>
 
-In the project directory, you can run:
+## 💻 Pré-requisito
 
-### `npm start`
+Antes de iniciar você precisa ter instalado:
+<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
+* Instale a versão mais recente de `<nodejs / jdk / yarn>`
+* Você precisa ter `<Windows / Linux / Mac>`.
+* Tem que ler esse `<guia>`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Instalando o dashboard do reclama
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para instalar o Dashboard do reclama, você precisa:
 
-### `npm test`
+Windows, Linux and macOS:
+```
+$ git clone https://github.com/Miguel-Oliveiraa/frontend-reclama
+or
+$ git clone git@github.com:Miguel-Oliveiraa/frontend-reclama.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## ☕ Usando o dashboard
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para usar você, precisa:
+Entrar no repositorio
+```
+$ cd frontend-reclama
+```
+Instalar dependências
+```
+$ npm install
+or
+$ yarn
+```
+Executar o script
+```
+$ npm run start
+or
+$ yarn start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📫 Contribuindo para o repositorio
+<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
+Para contribuir para <frontend-reclama>, siga esses passos:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Fork o repositório.
+2. Crie uma nova branch: `git checkout -b <branch_name>`.
+3. Faça as mudanças e commit: `git commit -m '<commit_message>'`
+4. Envie para branch original: `git push origin frontend-reclama / <local>`
+5. Create a new pull request.
 
-### `npm run eject`
+Outra alternativa, na documentação oficial do github [Creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[⬆ Volte para o topo](#react-native-food-app)<br>

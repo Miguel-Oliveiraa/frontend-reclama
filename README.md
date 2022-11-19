@@ -58,4 +58,4 @@ Para contribuir para <frontend-reclama>, siga esses passos:
 
 Outra alternativa, na documentação oficial do github [Creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-[⬆ Volte para o topo](#react-native-food-app)<br>
+[⬆ Volte para o topo](#frontend-reclama)<br>

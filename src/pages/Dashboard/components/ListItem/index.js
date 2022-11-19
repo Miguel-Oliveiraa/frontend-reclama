@@ -53,14 +53,7 @@ export default function ListItem(props) {
           </div>
           <p className="itemDescription">{props.description}</p>
           {props.status === 1 ? (
-            <p className="itemDescription">
-              Denuncia encerrada por: {props.atendenteData.nome} <br />
-              {props.comentario === "" ? (
-                ""
-              ) : (
-                <>Comentarios do atendente: {props.comentario}</>
-              )}
-            </p>
+            " "
           ) : (
             <CustomInput
               type="text"

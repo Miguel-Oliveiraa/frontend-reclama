@@ -20,9 +20,9 @@ Para instalar o Dashboard do reclama, você precisa:
 
 Windows, Linux and macOS:
 ```
-$ git clone https://github.com/Miguel-Oliveiraa/frontend-reclama
+$ git clone https://github.com/Miguel-Oliveiraa/reclama-frotendn
 or
-$ git clone git@github.com:Miguel-Oliveiraa/frontend-reclama.git
+$ git clone git@github.com:Miguel-Oliveiraa/reclama-frontend.git
 ```
 
 
